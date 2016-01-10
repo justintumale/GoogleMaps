@@ -3,19 +3,19 @@ import java.util.*;
 
 import geography.GeographicPoint;
 
-public class MapNode implements Comparable<MapNode>{
+public class MapNodeAStar implements Comparable<MapNodeAStar>{
 	
 	double longitude, latitude;
 	private List <MapEdge> edges;
-	private List <MapNode> neighbors = new ArrayList<MapNode>();
+	private List <MapNodeAStar> neighbors = new ArrayList<MapNodeAStar>();
 	private double weight;
+	private double function;
 	
+	public MapNodeAStar(){
 	
-	public MapNode(){
-		weight = 0;
 	}
 	
-	public MapNode(GeographicPoint p){
+	public MapNodeAStar(GeographicPoint p){
 		longitude = p.x;
 		latitude = p.y;
 		edges = new ArrayList<MapEdge>();
@@ -27,7 +27,7 @@ public class MapNode implements Comparable<MapNode>{
 		MapEdge newEdge = new MapEdge(from, to, roadName, roadType, length);
 		edges.add(newEdge);
 		
-		MapNode node = new MapNode(to);
+		MapNodeAStar node = new MapNodeAStar(to);
 		neighbors.add(node);
 	}
 	
@@ -42,7 +42,7 @@ public class MapNode implements Comparable<MapNode>{
 		return point;
 	}
 	
-	public List<MapNode> getNeighbors(){
+	public List<MapNodeAStar> getNeighbors(){
 		return this.neighbors;
 	}
 
@@ -54,7 +54,7 @@ public class MapNode implements Comparable<MapNode>{
 	}
 	
 	@Override
-	public int compareTo(MapNode o) {
+	public int compareTo(MapNodeAStar o) {
         if (getWeight() == o.getWeight()){
             return 0;
         }
