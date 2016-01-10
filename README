@@ -1,3 +1,37 @@
+# GoogleMaps
+This a basic implementation of Google Maps that uses several techniques to find 
+the shortest path from one vertex to another.  I am responsible for several 
+classes in roadgraph package which represents vertices and edges in a map and
+performs calculations to find the shortest path between two vertices: MapGraph.java, 
+MapNode.java, and MapEdge.java.  Also, I am responsible for several classes in the
+basicgraph package which is used to gain experience in using adjacency lists and
+adjacency matrices for graph representations.
+
+To run the code:
+	1. Run MapApp.java in the application package.
+	2. Select a map.  This can be done in two ways:
+		A. Click the drop down menu on the upper right hand corner of the
+		   GUI and select one of the given maps.  
+		B. 
+		    a. Create your own map by zooming into a location (make sure 
+		       you zoom in close enough, otherwise the file will be too 
+		       large).
+		    b. Save the map.  Giving it a name on the bottom left hand
+                      corner of the GUI. Then give the name a .map extension.
+		       Finally click “Fetch Data”.
+		    c. Refresh your data folder.
+	3. Click “Show Intersections”.
+	4. You will now see the intersections in the map. Select a starting
+	   point by clicking one of the vertices in the GUI and then pressing
+	   “Start”.
+	5. Select a destination vertex by clicking one of the vertices and 
+	   then pressing “Dest”.
+	6. Choose an algorithm that you would like to use.
+	7. Click “Show Route” to see the shortest path that the algorithm takes.
+	8. Next, click “Start Visualization” to see how the algorithm selects
+	   the vertices in the map.
+	9. To use another algorithm, click “Hide Route” and repeat steps 4-8.
+
 /-------------------------------------------------------------------------
 / Starter Code and GUI Application for Course 3 in the
 / Java Programming: Object Oriented Design of 
