@@ -1,6 +1,6 @@
 # GoogleMaps
-This a basic implementation of Google Maps that uses several techniques to find 
-the shortest path from one vertex to another.  I am responsible for several 
+This program is a basic implementation of Google Maps that uses several techniques 
+to find the shortest path from one vertex to another.  I am responsible for several 
 classes in roadgraph package which represents vertices and edges in a map and
 performs calculations to find the shortest path between two vertices: MapGraph.java, 
 MapNode.java, and MapEdge.java.  Also, I am responsible for several classes in the
